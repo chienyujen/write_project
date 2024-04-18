@@ -1,0 +1,20 @@
+Laravel 的 sail 該如何使用
+
+自己的使用經驗在這邊分享給大家，如果能夠協助完成開發的準備，那就真是太好了
+
+因為比較希望系統都是跑在 docker 內，所以才會安裝這個由 Laravel 開發的套件
+
+然後 Windows WSL 去安裝的中文說明也不多，所以這邊會以 Windows WSL 安裝法為主
+
+1. 先安裝 WSL2 ，我用的是 Ubuntu 20.xx
+
+2. 打開 cmd / PowerShell 然後輸入 WSL 進入 Linux 裡面
+
+3. 預設進入會在你的系統下，路徑是 /home/You_system_name，我會用 mkdir 建立一個 /src
+
+4. cd src，進入 src 資料夾底下
+
+5. 輸入 curl -s "https://laravel.build/Porject_Name" | bash，這邊說明一下【Porject_Name】這邊就是 Laravel 的專案名稱，
+    建立完畢後就會產生一個資料夾，預設會直接安裝 mysql、redis、meilisearch、mailpit、selenium 這些服務
+
+    6. alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)' 這是設定 ./vendor/bin/sail 這個執行檔的別名

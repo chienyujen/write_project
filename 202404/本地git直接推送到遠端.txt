@@ -1,0 +1,20 @@
+如何把本地專案 push 到 github 的"空"專案(請不要推已經友人協作的)
+
+本地專案先 git init
+
+然後設定 git remote add origin github_URL
+
+接下來隨意 git add 一個檔案，並且 git commit -m "init commit"
+
+因為現在 github 預設的主分支都是 main (沒有做調整的話)
+
+所以本地的分支要改名，從 master 改成 main
+
+git branch -m master main 
+
+接下來可以用 push -f 把本地的檔案覆蓋過去遠端的檔案
+
+git push --set-upstream -f origin main
+
+以上就是，暴力推遠端，記住，是剛開專案才能這樣做....
+
